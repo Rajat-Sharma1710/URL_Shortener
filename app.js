@@ -4,7 +4,7 @@ const env=require('dotenv').config()
 const app=express()
 const main=require('./routes/main')
 const short=require('./routes/shortRoute')
-const Port= 5000;
+const Port= process.env.PORT || 5000;
 
 app.set('view engine','ejs');
 app.use(express.static(path.join(__dirname , '/public')));
