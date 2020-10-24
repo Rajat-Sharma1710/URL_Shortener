@@ -25,7 +25,7 @@
                 </div>
                 <ul class="menu">
                     <li class="nav-list">
-                        <a href="/api" class="nav-link">Home</a>
+                        <a href="/" class="nav-link">Home</a>
                     </li>
                     <li class="nav-link">
                         <a href="" class="nav-link">Documentation</a>
@@ -42,7 +42,7 @@
                 <p class="description">
                     Forget those annoying , long URLs and convert Your own URL into a understandable & short URL.
                 </p>
-                <form action="/api" method="post">
+                <form action="/" method="post">
                     <div class="form-div">
                         <input required type="text" name="fullURL" class="url-input">
                         <button class="short-btn">Shorten</button>
@@ -78,7 +78,7 @@
                             <a href="<%= shorturls.ShortURL%>">
                                 <%= shorturls.ShortURL%></a>
                            
-                            <a class="btn btn-danger btn-xs"href="/api/delete/<%= shorturls._id%>"><i class="fa fa-trash"></i></a>
+                            <a class="btn btn-danger btn-xs"href="/delete/<%= shorturls._id%>"><i class="fa fa-trash"></i></a>
                         </td>
                          <td> 
                             <%= shorturls.urlCode%>
