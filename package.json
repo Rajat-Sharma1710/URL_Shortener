@@ -1,0 +1,23 @@
+{
+  "name": "url_shortener",
+  "version": "1.0.0",
+  "description": "Short Custom URL",
+  "main": "app.js",
+  "scripts": {
+    "app": "nodemon app.js"
+  },
+  "author": "Rajat_Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.2",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "shortid": "^2.2.15",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

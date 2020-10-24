@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Poppins&display=swap" rel="stylesheet">
+        <link href="//db.onlinewebfonts.com/c/0923ee644c97a87d70269aa80a6f1e79?family=The+Historia+Demo" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>URL Shortener</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <div class="menu-toggle">
+                    <div class="fa fa-bars"></div>
+                    <div class="fa fa-times"></div>
+                </div>
+                <div class="logo">
+                    URL Shortener
+                </div>
+                <ul class="menu">
+                    <li class="nav-list">
+                        <a href="/api" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="" class="nav-link">Documentation</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="" class="nav-link get-started">Get Started</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="hero">
+                <h1 class="main-headline">
+                    ANNOYED WITH LONG URLs ?
+                </h1>
+                <p class="description">
+                    Forget those annoying , long URLs and convert Your own URL into a understandable & short URL.
+                </p>
+                <form action="/api" method="post">
+                    <div class="form-div">
+                        <input required type="text" name="fullURL" class="url-input">
+                        <button class="short-btn">Shorten</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <section class="table-section">
+        <div class="container">
+            <table class="url-table">
+                <thead>
+                    <tr class="table-row url-head">
+                        <th class="">
+                            Orginal URL
+                        </th>
+                        <th class="">
+                            Shortened URL
+                        </th>
+                        <th class="">
+                            URL Code
+                        </th>
+                    </tr>
+                </thead>
+               <tbody>
+                <% data.forEach(shorturls =>{ %>
+                <tr class="table-row">
+                    <td>
+                        <a href="<%= shorturls.fullURL%>">
+                            <%= shorturls.fullURL%></a>
+                        </td>
+                        <td class="short-url">
+                            <a href="<%= shorturls.ShortURL%>">
+                                <%= shorturls.ShortURL%></a>
+                           
+                            <a class="btn btn-danger btn-xs"href="/api/delete/<%= shorturls._id%>"><i class="fa fa-trash"></i></a>
+                        </td>
+                         <td> 
+                            <%= shorturls.urlCode%>
+                            </td>
+                    </tr>
+                        <% }) %> 
+               </tbody>
+            </table>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="content">
+                <div class="contact">
+                    <h4 class="footer-headline">
+                        Contact Us
+                    </h4>
+                    <p>
+                        If You have any query regarding URL Shortener or have some feedback You can directly contact us
+                        at our Email address product@gmail.com.
+                    </p>
+                </div>
+                <div class="contributors">
+                    <h4 class="footer-headline">
+                        Contributors
+                    </h4>
+                    <p>
+                        Rajat Sharma
+                    </p>
+                    <p>
+                        Shubh Jain
+                    </p>
+                </div>
+
+                <div class="social-media">
+                    <h4 class="footer-headline">
+                        Follow Us
+                    </h4>
+                    <ul class="social-icons">
+                        <li class="icon-list">
+                            <a href="#" class="icon-link">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="icon-list">
+                            <a href="#" class="icon-link">
+                                <i class="fa fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li class="icon-list">
+                            <a href="#" class="icon-link">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="icon-list">
+                            <a href="#" class="icon-link">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/javascript.js"></script>
+</body>
+
+</html>
