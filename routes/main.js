@@ -24,7 +24,7 @@ router.get('/delete/:id',(req,res)=>{
     delurl.exec((err,data)=>{
         if(err) throw err;
 
-        res.redirect('/api')
+        res.redirect('/')
     })
 })
 
@@ -46,10 +46,10 @@ router.post("/", (req,res)=>{
                     res.status(500).json("Internal Server error")
                 }
                             if(data){
-                                res.redirect('/api');
+                                res.redirect('/');
                             }
                             else{
-                const shorturl=baseURL + "/" + code;
+               const shorturl=baseURL + "/" +"short"+"/"+ code ;
                      var url=new db({
                                     fullURL:fullURL ,
                                     ShortURL:shorturl,
@@ -57,7 +57,7 @@ router.post("/", (req,res)=>{
                                 })
                                url.save()
                                 // res.json(url)
-                            return res.redirect('/api')
+                            return res.redirect('/')
                         }
             })
     }
