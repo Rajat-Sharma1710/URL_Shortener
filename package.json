@@ -4,7 +4,7 @@
   "description": "Short Custom URL",
   "main": "app.js",
   "scripts": {
-    "app": "nodemon app.js"
+    "start": "nodemon app.js"
   },
   "author": "Rajat_Sharma",
   "license": "ISC",
