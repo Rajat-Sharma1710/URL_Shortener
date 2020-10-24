@@ -49,7 +49,7 @@ router.post("/", (req,res)=>{
                                 res.redirect('/');
                             }
                             else{
-               const shorturl=baseURL+"/"+ code ;
+               const shorturl=baseURL+ code ;
                      var url=new db({
                                     fullURL:fullURL ,
                                     ShortURL:shorturl,
